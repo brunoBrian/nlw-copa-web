@@ -6,7 +6,7 @@ export default function Home({count}: HomeProps) {
   fetch('http://localhost:3333/pools/count')
 
   return (
-    <h1>Hello {count}</h1>
+    <h1 className="text-violet-900">Hello {count}</h1>
   )
 }
 
@@ -16,7 +16,7 @@ export const getServerSideProps = async () => {
 
   return {
     props: {
-      count: data
+      count: data.count
     }
   }
 }
